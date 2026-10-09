@@ -11,7 +11,7 @@ const nodes = [
 	{ id: "n10", x: 348, y: 348, r: 5, lit: false },
 	{ id: "n11", x: 128, y: 392, r: 5, lit: true },
 	{ id: "n12", x: 264, y: 432, r: 5, lit: false },
-];
+]
 
 const edges: [string, string][] = [
 	["n1", "n2"],
@@ -30,9 +30,9 @@ const edges: [string, string][] = [
 	["n9", "n11"],
 	["n11", "n12"],
 	["n12", "n10"],
-];
+]
 
-const byId = Object.fromEntries(nodes.map((n) => [n.id, n]));
+const byId = Object.fromEntries(nodes.map((n) => [n.id, n]))
 
 export default function NetworkGraphic() {
 	return (
@@ -45,8 +45,8 @@ export default function NetworkGraphic() {
 			>
 				<g stroke="#10131A" strokeOpacity="0.22" strokeWidth="1.4">
 					{edges.map(([a, b], i) => {
-						const from = byId[a];
-						const to = byId[b];
+						const from = byId[a]
+						const to = byId[b]
 						return (
 							<line
 								key={`${a}-${b}`}
@@ -57,7 +57,7 @@ export default function NetworkGraphic() {
 								x2={to.x}
 								y2={to.y}
 							/>
-						);
+						)
 					})}
 				</g>
 
@@ -111,5 +111,5 @@ export default function NetworkGraphic() {
         }
       `}</style>
 		</div>
-	);
+	)
 }

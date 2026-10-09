@@ -1,5 +1,5 @@
-import Link from "next/link";
-import NetworkGraphic from "@/components/NetworkGraphic";
+import Link from "next/link"
+import NetworkGraphic from "@/components/NetworkGraphic"
 
 const tags = [
 	"Software Development",
@@ -7,7 +7,7 @@ const tags = [
 	"Cloud & Infrastructure",
 	"Data & Integrations",
 	"Systems Architecture",
-];
+]
 
 const capabilities = [
 	{
@@ -22,10 +22,9 @@ const capabilities = [
 	},
 	{
 		title: "Cloud & Infrastructure",
-		description:
-			"Cloud setup, CI/CD pipelines, and monitoring that keep releases predictable and outages rare.",
+		description: "Cloud setup, CI/CD pipelines, and monitoring that keep releases predictable and outages rare.",
 	},
-];
+]
 
 const steps = [
 	{
@@ -35,15 +34,13 @@ const steps = [
 	},
 	{
 		title: "Build",
-		description:
-			"Working software early, shipped in small pieces you can see, use, and react to along the way.",
+		description: "Working software early, shipped in small pieces you can see, use, and react to along the way.",
 	},
 	{
 		title: "Support",
-		description:
-			"We stay involved after launch, fixing, tuning, and adapting the system as your needs change.",
+		description: "We stay involved after launch, fixing, tuning, and adapting the system as your needs change.",
 	},
-];
+]
 
 export default function Home() {
 	return (
@@ -56,9 +53,8 @@ export default function Home() {
 							Software and systems, built to last.
 						</h1>
 						<p className="mt-6 max-w-md text-lg leading-relaxed text-ink-soft">
-							Daniel Cosmo works with founders and teams to design, build, and
-							run the technology behind their business, from a first working
-							prototype to the infrastructure that keeps it online.
+							Daniel Cosmo works with founders and teams to design, build, and run the technology behind their business,
+							from a first working prototype to the infrastructure that keeps it online.
 						</p>
 						<div className="mt-9 flex flex-wrap gap-4">
 							<Link href="/contact" className="btn-primary">
@@ -80,10 +76,7 @@ export default function Home() {
 			<section className="border-y border-line bg-cream">
 				<div className="container-page flex flex-wrap gap-3 py-8">
 					{tags.map((tag) => (
-						<span
-							key={tag}
-							className="rounded-full border border-line bg-paper px-4 py-1.5 text-sm text-ink-soft"
-						>
+						<span key={tag} className="rounded-full border border-line bg-paper px-4 py-1.5 text-sm text-ink-soft">
 							{tag}
 						</span>
 					))}
@@ -94,27 +87,17 @@ export default function Home() {
 			<section className="section-pad">
 				<div className="container-page">
 					<div className="max-w-xl">
-						<h2 className="font-display text-3xl font-semibold tracking-tight text-ink">
-							What we do
-						</h2>
+						<h2 className="font-display text-3xl font-semibold tracking-tight text-ink">What we do</h2>
 						<p className="mt-4 text-ink-soft">
-							A small, focused set of services rather than a long menu, so the
-							work stays deep instead of spread thin.
+							A small, focused set of services rather than a long menu, so the work stays deep instead of spread thin.
 						</p>
 					</div>
 
 					<div className="mt-12 grid gap-6 md:grid-cols-3">
 						{capabilities.map((item) => (
-							<div
-								key={item.title}
-								className="rounded border border-line p-7 transition-colors hover:border-ink"
-							>
-								<h3 className="font-display text-lg font-semibold text-ink">
-									{item.title}
-								</h3>
-								<p className="mt-3 text-sm leading-relaxed text-ink-soft">
-									{item.description}
-								</p>
+							<div key={item.title} className="rounded border border-line p-7 transition-colors hover:border-ink">
+								<h3 className="font-display text-lg font-semibold text-ink">{item.title}</h3>
+								<p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.description}</p>
 							</div>
 						))}
 					</div>
@@ -133,9 +116,7 @@ export default function Home() {
 			{/* How we work */}
 			<section className="section-pad bg-dark">
 				<div className="container-page">
-					<h2 className="font-display text-3xl font-semibold tracking-tight text-paper">
-						How we work
-					</h2>
+					<h2 className="font-display text-3xl font-semibold tracking-tight text-paper">How we work</h2>
 
 					<div className="mt-14 grid gap-10 md:grid-cols-3">
 						{steps.map((step, i) => (
@@ -144,13 +125,9 @@ export default function Home() {
 									<span className="font-display text-sm font-semibold text-accent">
 										{String(i + 1).padStart(2, "0")}
 									</span>
-									<h3 className="font-display text-lg font-semibold text-paper">
-										{step.title}
-									</h3>
+									<h3 className="font-display text-lg font-semibold text-paper">{step.title}</h3>
 								</div>
-								<p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-faint">
-									{step.description}
-								</p>
+								<p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-faint">{step.description}</p>
 								{i < steps.length - 1 && (
 									<div
 										className="absolute right-[-1.25rem] top-2 hidden h-px w-8 bg-line-dark md:block"
@@ -167,14 +144,11 @@ export default function Home() {
 			<section className="section-pad">
 				<div className="container-page grid gap-12 md:grid-cols-2 md:items-center">
 					<div>
-						<h2 className="font-display text-3xl font-semibold tracking-tight text-ink">
-							A founder-led studio
-						</h2>
+						<h2 className="font-display text-3xl font-semibold tracking-tight text-ink">A founder-led studio</h2>
 						<p className="mt-5 text-ink-soft">
-							Daniel Cosmo is led directly by its founder, which means the
-							person who scopes your project is the same person accountable for
-							delivering it. No handoffs between sales and engineering, no
-							account managers relaying messages.
+							Daniel Cosmo is led directly by its founder, which means the person who scopes your project is the same
+							person accountable for delivering it. No handoffs between sales and engineering, no account managers
+							relaying messages.
 						</p>
 						<div className="mt-8">
 							<Link
@@ -193,12 +167,9 @@ export default function Home() {
 			<section className="border-t border-line bg-cream">
 				<div className="container-page flex flex-col items-start justify-between gap-6 py-16 md:flex-row md:items-center">
 					<div>
-						<h2 className="font-display text-2xl font-semibold tracking-tight text-ink">
-							Have a project in mind?
-						</h2>
+						<h2 className="font-display text-2xl font-semibold tracking-tight text-ink">Have a project in mind?</h2>
 						<p className="mt-2 text-ink-soft">
-							Tell us about it and we&apos;ll get back to you within a couple of
-							days.
+							Tell us about it and we&apos;ll get back to you within a couple of days.
 						</p>
 					</div>
 					<Link href="/contact" className="btn-primary">
@@ -207,5 +178,5 @@ export default function Home() {
 				</div>
 			</section>
 		</>
-	);
+	)
 }

@@ -1,16 +1,13 @@
-import Link from "next/link";
+import Link from "next/link"
 
 export default function Footer() {
 	return (
 		<footer className="border-t border-line bg-paper">
 			<div className="container-page grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
 				<div>
-					<span className="font-display text-lg font-bold tracking-tight text-ink">
-						Daniel Cosmo
-					</span>
+					<span className="font-display text-lg font-bold tracking-tight text-ink">Daniel Cosmo</span>
 					<p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-soft">
-						Software development, IT consulting, and infrastructure for teams
-						that need their technology to just work.
+						Software development, IT consulting, and infrastructure for teams that need their technology to just work.
 					</p>
 				</div>
 
@@ -23,26 +20,17 @@ export default function Footer() {
 							</Link>
 						</li>
 						<li>
-							<Link
-								href="/services"
-								className="text-sm text-ink-soft hover:text-ink"
-							>
+							<Link href="/services" className="text-sm text-ink-soft hover:text-ink">
 								Services
 							</Link>
 						</li>
 						<li>
-							<Link
-								href="/about"
-								className="text-sm text-ink-soft hover:text-ink"
-							>
+							<Link href="/about" className="text-sm text-ink-soft hover:text-ink">
 								About
 							</Link>
 						</li>
 						<li>
-							<Link
-								href="/contact"
-								className="text-sm text-ink-soft hover:text-ink"
-							>
+							<Link href="/contact" className="text-sm text-ink-soft hover:text-ink">
 								Contact
 							</Link>
 						</li>
@@ -54,9 +42,7 @@ export default function Footer() {
 					<ul className="mt-4 space-y-3">
 						<li className="text-sm text-ink-soft">Software Development</li>
 						<li className="text-sm text-ink-soft">IT Consulting</li>
-						<li className="text-sm text-ink-soft">
-							Cloud &amp; Infrastructure
-						</li>
+						<li className="text-sm text-ink-soft">Cloud &amp; Infrastructure</li>
 						<li className="text-sm text-ink-soft">Data &amp; Integrations</li>
 					</ul>
 				</div>
@@ -65,10 +51,7 @@ export default function Footer() {
 					<p className="text-sm font-semibold text-ink">Contact</p>
 					<ul className="mt-4 space-y-3">
 						<li>
-							<a
-								href="mailto:hello@danielcosmo.com"
-								className="text-sm text-ink-soft hover:text-ink"
-							>
+							<a href="mailto:hello@danielcosmo.com" className="text-sm text-ink-soft hover:text-ink">
 								hello@danielcosmo.com
 							</a>
 						</li>
@@ -84,5 +67,5 @@ export default function Footer() {
 				</div>
 			</div>
 		</footer>
-	);
+	)
 }

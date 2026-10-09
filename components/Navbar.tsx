@@ -1,25 +1,22 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { useState } from "react";
+import Link from "next/link"
+import { useState } from "react"
 
 const links = [
 	{ href: "/", label: "Home" },
 	{ href: "/services", label: "Services" },
 	{ href: "/about", label: "About" },
 	{ href: "/contact", label: "Contact" },
-];
+]
 
 export default function Navbar() {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(false)
 
 	return (
 		<header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur">
 			<div className="container-page flex items-center justify-between py-5">
-				<Link
-					href="/"
-					className="font-display text-lg font-bold tracking-tight text-ink"
-				>
+				<Link href="/" className="font-display text-lg font-bold tracking-tight text-ink">
 					Daniel Cosmo
 				</Link>
 
@@ -49,27 +46,11 @@ export default function Navbar() {
 					onClick={() => setOpen((v) => !v)}
 				>
 					<span className="sr-only">Toggle navigation</span>
-					<svg
-						width="18"
-						height="18"
-						viewBox="0 0 18 18"
-						fill="none"
-						aria-hidden="true"
-					>
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
 						{open ? (
-							<path
-								d="M2 2L16 16M16 2L2 16"
-								stroke="#10131A"
-								strokeWidth="1.6"
-								strokeLinecap="round"
-							/>
+							<path d="M2 2L16 16M16 2L2 16" stroke="#10131A" strokeWidth="1.6" strokeLinecap="round" />
 						) : (
-							<path
-								d="M1 4H17M1 9H17M1 14H17"
-								stroke="#10131A"
-								strokeWidth="1.6"
-								strokeLinecap="round"
-							/>
+							<path d="M1 4H17M1 9H17M1 14H17" stroke="#10131A" strokeWidth="1.6" strokeLinecap="round" />
 						)}
 					</svg>
 				</button>
@@ -88,16 +69,12 @@ export default function Navbar() {
 								{link.label}
 							</Link>
 						))}
-						<Link
-							href="/contact"
-							onClick={() => setOpen(false)}
-							className="btn-primary mt-2 w-full"
-						>
+						<Link href="/contact" onClick={() => setOpen(false)} className="btn-primary mt-2 w-full">
 							Start a project
 						</Link>
 					</nav>
 				</div>
 			)}
 		</header>
-	);
+	)
 }
